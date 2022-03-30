@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <!-- P -->
+    <Dita_Data_Backup_pwr>伤害</Dita_Data_Backup_pwr>
+    <Dita_Data_Backup_pwr_description>每级增加20%技能伤害</Dita_Data_Backup_pwr_description>
+
+    <Dita_Data_Backup_ver>削弱</Dita_Data_Backup_ver>
+    <Dita_Data_Backup_ver_description>每级增加减少属性值</Dita_Data_Backup_ver_description>
+
+    <Dita_Data_Backup_eff>消耗</Dita_Data_Backup_eff>
+    <Dita_Data_Backup_eff_description>每技能等级降低法力值消耗5%</Dita_Data_Backup_eff_description>
+
+    <!-- Q -->
+    <Dita_Data_Projector_pwr>伤害</Dita_Data_Projector_pwr>
+    <Dita_Data_Projector_pwr_description>I级：25%几率使凝聚出特殊的结晶
+                                         II级：50%几率
+                                         III级：75%几率</Dita_Data_Projector_pwr_description>
+
+    <Dita_Data_Projector_ver>削弱</Dita_Data_Projector_ver>
+    <Dita_Data_Projector_ver_description>I级：凝聚数量+1
+                                         II级：凝聚数量+1
+                                         III级：凝聚数量+1</Dita_Data_Projector_ver_description>
+
+    <Dita_Data_Projector_eff>消耗</Dita_Data_Projector_eff>
+    <Dita_Data_Projector_eff_description>每技能等级降低法力值消耗5%</Dita_Data_Projector_eff_description>
+
+    <!-- W -->
+    <Dita_Data_Replication_pwr>伤害</Dita_Data_Replication_pwr>
+    <Dita_Data_Replication_pwr_description>I级：25%几率使凝聚出特殊的结晶
+                                         II级：50%几率
+                                         III级：75%几率</Dita_Data_Replication_pwr_description>
+
+    <Dita_Data_Replication_ver>削弱</Dita_Data_Replication_ver>
+    <Dita_Data_Replication_ver_description>I级：凝聚数量+1
+                                         II级：凝聚数量+1
+                                         III级：凝聚数量+1</Dita_Data_Replication_ver_description>
+
+    <Dita_Data_Replication_eff>消耗</Dita_Data_Replication_eff>
+    <Dita_Data_Replication_eff_description>每技能等级降低法力值消耗5%</Dita_Data_Replication_eff_description>
+
+    <!-- E -->
+
+    <Dita_Data_Conversion_pwr>伤害</Dita_Data_Conversion_pwr>
+    <Dita_Data_Conversion_pwr_description>I级：25%几率使凝聚出特殊的结晶
+                                         II级：50%几率
+                                         III级：75%几率</Dita_Data_Conversion_pwr_description>
+
+    <Dita_Data_Conversion_ver>削弱</Dita_Data_Conversion_ver>
+    <Dita_Data_Conversion_ver_description>I级：凝聚数量+1
+                                         II级：凝聚数量+1
+                                         III级：凝聚数量+1</Dita_Data_Conversion_ver_description>
+
+    <Dita_Data_Conversion_eff>消耗</Dita_Data_Conversion_eff>
+    <Dita_Data_Conversion_eff_description>每技能等级降低法力值消耗5%</Dita_Data_Conversion_eff_description>
+
+    <!-- R -->
+    <Dita_Data_Deletion_pwr>伤害</Dita_Data_Deletion_pwr>
+    <Dita_Data_Deletion_pwr_description>I级：25%几率使凝聚出特殊的结晶
+                                         II级：50%几率
+                                         III级：75%几率</Dita_Data_Deletion_pwr_description>
+
+    <Dita_Data_Deletion_ver>削弱</Dita_Data_Deletion_ver>
+    <Dita_Data_Deletion_ver_description>I级：凝聚数量+1
+                                         II级：凝聚数量+1
+                                         III级：凝聚数量+1</Dita_Data_Deletion_ver_description>
+
+    <Dita_Data_Deletion_eff>消耗</Dita_Data_Deletion_eff>
+    <Dita_Data_Deletion_eff_description>每技能等级降低法力值消耗5%</Dita_Data_Deletion_eff_description>
+
+</LanguageData>

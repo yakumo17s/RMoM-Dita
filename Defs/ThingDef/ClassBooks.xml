@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<Defs>
+
+
+    <!-- 残卷 -->
+
+    <ThingDef ParentName="Partial_ArcaneScriptBase">
+        <defName>Torn_BookOfDita</defName>
+        <label>Torn Script: Dita</label>
+        <thingClass>ThingWithComps</thingClass>
+        <description>torn script of the Dita.</description>
+        <category>Item</category>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <tradeNeverStack>true</tradeNeverStack>
+        <useHitPoints>true</useHitPoints>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+        <rotatable>false</rotatable>
+        <graphicData>
+            <texPath>Books/random</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+
+    <!-- 转职书 -->
+    <ThingDef ParentName="ArcaneScriptBase">
+        <defName>BookOfDita</defName>
+        <label>Arcane Tome: Dita</label>
+        <thingClass>ThingWithComps</thingClass>
+        <description>The angel Dita falls on rimworld.</description>
+        <category>Item</category>
+        <selectable>true</selectable>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <tradeNeverStack>true</tradeNeverStack>
+        <useHitPoints>true</useHitPoints>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+        </comps>
+        <rotatable>false</rotatable>
+        <graphicData>
+            <texPath>Books/random</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+
+</Defs>

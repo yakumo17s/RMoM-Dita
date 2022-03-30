@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/TorannMagic.TM_CustomClassDef[defName = "TM_CustomClasses"]/customClasses</xpath>
+        <value>
+            <!-- Custom Class - the Wayfarer -->
+            <li>
+                <classTrait>Dita</classTrait>
+                <traitDegree>4</traitDegree>
+                <classHediff></classHediff>
+                <classTexturePath>wayfarerFlame</classTexturePath>
+                <classIconPath>CustomFlame</classIconPath>
+                <classIconColor>(1,0.09,0.39)</classIconColor>
+                <tornScript>Torn_BookOfDita</tornScript>
+                <fullScript>BookOfDita</fullScript>
+
+                <classMageAbilities>
+                    <li>Dita_Data_Backup</li>
+                    <li>Dita_Data_Projector_1</li>
+                    <li>Dita_Data_Projector_2</li>
+                    <li>Dita_Data_Projector_3</li>
+                    <li>Dita_Data_Projector_4</li>
+                    <li>Dita_Data_Projector_5</li>
+                    <li>Dita_Data_Replication</li>
+                    <li>Dita_Data_Conversion</li>
+                    <li>Dita_Data_Deletion</li>
+                </classMageAbilities>
+                <learnableSpells></learnableSpells>
+
+                <classFighterAbilities></classFighterAbilities>
+                <learnableSkills></learnableSkills>
+
+                <isMage>true</isMage>
+                <isFighter>false</isFighter>
+                <maxMageLevel>300</maxMageLevel>
+
+                <isNecromancer>false</isNecromancer>
+                <isUndead>false</isUndead>
+
+                <isAndroid>false</isAndroid>
+                <isAdvancedClass>false</isAdvancedClass>
+            </li>
+        </value>
+    </Operation>
+</Patch>

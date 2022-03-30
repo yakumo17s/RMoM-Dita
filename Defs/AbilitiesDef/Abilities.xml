@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- 被动技能 数据备份 -->
+    <!-- 创造一个分身 本体释放技能联动 -->
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Backup</defName>
+        <label>Data_Backup</label>
+        <description>Q skill</description>
+        <uiIconPath>Dita_Abilities/Dita_P_Data_Backup</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <learnItem>MF_Book_Crystal</learnItem>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_SB</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>false</hasStandardCommand>
+            <!-- <defaultProjectile>MF_Projectile_SpawnCrystal</defaultProjectile> -->
+            <abilityDef>Dita_Data_Backup</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>15</SecondsToRecharge>
+            <range>10</range>
+            <soundCast>MeleeHit_Metal_Sharp</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>false</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TM_CustomPowerDef ParentName="CustomPower">
+        <defName>Dita_Data_Backup</defName>
+        <customPower>
+            <forMage>true</forMage>
+            <abilityDefs>
+                <li>Dita_Data_Backup</li>
+            </abilityDefs>
+            <skills>
+                <li>
+                    <label>Dita_Data_Backup_pwr</label>
+                    <description>Dita_Data_Backup_pwr_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Backup_ver</label>
+                    <description>Dita_Data_Backup_ver_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Backup_eff</label>
+                    <description>Dita_Data_Backup_eff_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+            </skills>
+            <costToLevel>2</costToLevel>
+        </customPower>
+    </TorannMagic.TM_CustomPowerDef>
+
+    <!-- Q技能 数据投影 -->
+
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+        <defName>TM_Projectile_PsionicBlast</defName>
+        <thingClass>TorannMagic.Projectile_PsionicBlast</thingClass>
+        <label>psionic blast</label>
+        <graphicData>
+            <texPath>Spells/psiblast</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <flyOverhead>true</flyOverhead>
+            <damageDef>TM_PsionicInjury</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <speed>60</speed>
+            <explosionRadius>2</explosionRadius>
+            <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        </projectile>
+    </ThingDef>
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Projector_1</defName>
+        <label>Data_Projector</label>
+        <description>Q skill</description>
+        <uiIconPath>Dita_Abilities/Dita_Q_Data_Projector</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <canCopy>true</canCopy>
+        <!-- <learnItem>MF_Book_Crystal</learnItem> -->
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_PsionicBlast</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>TM_Projectile_PsionicBlast</defaultProjectile>
+            <abilityDef>Dita_Data_Projector_1</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>5</SecondsToRecharge>
+            <range>10</range>
+            <soundCast>TM_Projectile_PsionicBlast</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>true</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>5</burstShotCount>
+            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Projector_2</defName>
+        <label>Data_Projector</label>
+        <description>Q skill</description>
+        <uiIconPath>Dita_Abilities/Dita_Q_Data_Projector</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <canCopy>true</canCopy>
+        <!-- <learnItem>MF_Book_Crystal</learnItem> -->
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_PsionicBlast</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>TM_Projectile_PsionicBlast</defaultProjectile>
+            <abilityDef>Dita_Data_Projector_2</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>5</SecondsToRecharge>
+            <range>20</range>
+            <soundCast>TM_Projectile_PsionicBlast</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>true</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>5</burstShotCount>
+            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Projector_3</defName>
+        <label>Data_Projector</label>
+        <description>Q skill</description>
+        <uiIconPath>Dita_Abilities/Dita_Q_Data_Projector</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <canCopy>true</canCopy>
+        <!-- <learnItem>MF_Book_Crystal</learnItem> -->
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_PsionicBlast</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>TM_Projectile_PsionicBlast</defaultProjectile>
+            <abilityDef>Dita_Data_Projector_3</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>5</SecondsToRecharge>
+            <range>30</range>
+            <soundCast>TM_Projectile_PsionicBlast</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>true</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>5</burstShotCount>
+            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Projector_4</defName>
+        <label>Data_Projector</label>
+        <description>Q skill</description>
+        <uiIconPath>Dita_Abilities/Dita_Q_Data_Projector</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <canCopy>true</canCopy>
+        <!-- <learnItem>MF_Book_Crystal</learnItem> -->
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_PsionicBlast</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>TM_Projectile_PsionicBlast</defaultProjectile>
+            <abilityDef>Dita_Data_Projector_4</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>5</SecondsToRecharge>
+            <range>40</range>
+            <soundCast>TM_Projectile_PsionicBlast</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>true</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>5</burstShotCount>
+            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Projector_5</defName>
+        <label>Data_Projector</label>
+        <description>Q skill</description>
+        <uiIconPath>Dita_Abilities/Dita_Q_Data_Projector</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <canCopy>true</canCopy>
+        <!-- <learnItem>MF_Book_Crystal</learnItem> -->
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_PsionicBlast</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>TM_Projectile_PsionicBlast</defaultProjectile>
+            <abilityDef>Dita_Data_Projector_5</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>5</SecondsToRecharge>
+            <range>50</range>
+            <soundCast>TM_Projectile_PsionicBlast</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>true</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>5</burstShotCount>
+            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TM_CustomPowerDef ParentName="CustomPower">
+        <defName>Dita_Data_Projector</defName>
+        <customPower>
+            <forMage>true</forMage>
+            <abilityDefs>
+                <li>Dita_Data_Projector_1</li>
+                <li>Dita_Data_Projector_2</li>
+                <li>Dita_Data_Projector_3</li>
+                <li>Dita_Data_Projector_4</li>
+                <li>Dita_Data_Projector_5</li>
+            </abilityDefs>
+            <skills>
+                <li>
+                    <label>Dita_Data_Projector_pwr</label>
+                    <description>Dita_Data_Projector_pwr_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Projector_ver</label>
+                    <description>Dita_Data_Projector_ver_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Projector_eff</label>
+                    <description>Dita_Data_Projector_eff_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+            </skills>
+            <costToLevel>2</costToLevel>
+        </customPower>
+    </TorannMagic.TM_CustomPowerDef>
+
+    <!-- W技能 数据复制 -->
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Replication</defName>
+        <label>Data_Replication</label>
+        <description>W skill</description>
+        <uiIconPath>Dita_Abilities/Dita_W_Data_Replication</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <learnItem>MF_Book_Crystal</learnItem>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_SB</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>false</hasStandardCommand>
+            <!-- <defaultProjectile>MF_Projectile_SpawnCrystal</defaultProjectile> -->
+            <abilityDef>Dita_Data_Replication</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>15</SecondsToRecharge>
+            <range>10</range>
+            <soundCast>MeleeHit_Metal_Sharp</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>false</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TM_CustomPowerDef ParentName="CustomPower">
+        <defName>Dita_Data_Replication</defName>
+        <customPower>
+            <forMage>true</forMage>
+            <abilityDefs>
+                <li>Dita_Data_Replication</li>
+            </abilityDefs>
+            <skills>
+                <li>
+                    <label>Dita_Data_Replication_pwr</label>
+                    <description>Dita_Data_Replication_pwr_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Replication_ver</label>
+                    <description>Dita_Data_Replication_ver_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Replication_eff</label>
+                    <description>Dita_Data_Replication_eff_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+            </skills>
+            <costToLevel>2</costToLevel>
+        </customPower>
+    </TorannMagic.TM_CustomPowerDef>
+
+    <!-- E技能 数据转换 -->
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Conversion</defName>
+        <label>Data_Conversion</label>
+        <description>E skill</description>
+        <uiIconPath>Dita_Abilities/Dita_E_Data_Conversion</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <learnItem>MF_Book_Crystal</learnItem>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_SB</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>false</hasStandardCommand>
+            <!-- <defaultProjectile>MF_Projectile_SpawnCrystal</defaultProjectile> -->
+            <abilityDef>Dita_Data_Conversion</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>15</SecondsToRecharge>
+            <range>10</range>
+            <soundCast>MeleeHit_Metal_Sharp</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>false</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TM_CustomPowerDef ParentName="CustomPower">
+        <defName>Dita_Data_Conversion</defName>
+        <customPower>
+            <forMage>true</forMage>
+            <abilityDefs>
+                <li>Dita_Data_Conversion</li>
+            </abilityDefs>
+            <skills>
+                <li>
+                    <label>Dita_Data_Conversion_pwr</label>
+                    <description>Dita_Data_Conversion_pwr_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Conversion_ver</label>
+                    <description>Dita_Data_Conversion_ver_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Conversion_eff</label>
+                    <description>Dita_Data_Conversion_eff_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+            </skills>
+            <costToLevel>2</costToLevel>
+        </customPower>
+    </TorannMagic.TM_CustomPowerDef>
+
+    <!-- R技能 数据删除 -->
+
+    <TorannMagic.TMAbilityDef ParentName="BaseMagicAbility">
+        <defName>Dita_Data_Deletion</defName>
+        <label>Data_Deletion</label>
+        <description>R skill</description>
+        <uiIconPath>Dita_Abilities/Dita_R_Data_Deletion</uiIconPath>
+        <manaCost>0.2</manaCost>
+        <efficiencyReductionPercent>.05</efficiencyReductionPercent>
+        <learnItem>MF_Book_Crystal</learnItem>
+        <MainVerb Class="AbilityUser.VerbProperties_Ability">
+            <verbClass>TorannMagic.Verb_SB</verbClass>
+            <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+            <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+            <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+            <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+            <hasStandardCommand>false</hasStandardCommand>
+            <!-- <defaultProjectile>MF_Projectile_SpawnCrystal</defaultProjectile> -->
+            <abilityDef>Dita_Data_Deletion</abilityDef>
+            <warmupTime>0</warmupTime>
+            <SecondsToRecharge>15</SecondsToRecharge>
+            <range>10</range>
+            <soundCast>MeleeHit_Metal_Sharp</soundCast>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <isPrimary>false</isPrimary>
+            <isViolent>true</isViolent>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </MainVerb>
+    </TorannMagic.TMAbilityDef>
+
+    <TorannMagic.TM_CustomPowerDef ParentName="CustomPower">
+        <defName>Dita_Data_Deletion</defName>
+        <customPower>
+            <forMage>true</forMage>
+            <abilityDefs>
+                <li>Dita_Data_Deletion</li>
+            </abilityDefs>
+            <skills>
+                <li>
+                    <label>Dita_Data_Deletion_pwr</label>
+                    <description>Dita_Data_Deletion_pwr_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Deletion_ver</label>
+                    <description>Dita_Data_Deletion_ver_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+                <li>
+                    <label>Dita_Data_Deletion_eff</label>
+                    <description>Dita_Data_Deletion_eff_description</description>
+                    <levelMax>3</levelMax>
+                    <costToLevel>1</costToLevel>
+                </li>
+            </skills>
+            <costToLevel>2</costToLevel>
+        </customPower>
+    </TorannMagic.TM_CustomPowerDef>
+
+</Defs>

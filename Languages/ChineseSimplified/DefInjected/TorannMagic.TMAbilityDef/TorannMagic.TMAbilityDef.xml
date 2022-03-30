@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <Dita_Data_Backup.label>数据备份</Dita_Data_Backup.label>
+    <Dita_Data_Backup.description>t技能</Dita_Data_Backup.description>
+
+    <Dita_Data_Projector.label>数据投影</Dita_Data_Projector.label>
+    <Dita_Data_Projector.description>q技能</Dita_Data_Projector.description>
+
+    <Dita_Data_Replication.label>数据复制</Dita_Data_Replication.label>
+    <Dita_Data_Replication.description>w技能</Dita_Data_Replication.description>
+
+    <Dita_Data_Conversion.label>数据转换</Dita_Data_Conversion.label>
+    <Dita_Data_Conversion.description>e技能</Dita_Data_Conversion.description>
+
+    <Dita_Data_Deletion.label>数据删除</Dita_Data_Deletion.label>
+    <Dita_Data_Deletion.description>r技能</Dita_Data_Deletion.description>
+
+
+</LanguageData>
